@@ -1,6 +1,6 @@
 console.log('Client side javascript loaded');
 const getWeather = (address, callback) => {
-    fetch(`http://localhost:3000/weather?address=${address}`).then((res) => {
+    fetch(`/weather?address=${address}`).then((res) => {
         res.json().then((data) => {
             if (data.error) {
                 return callback(data.error, undefined);
